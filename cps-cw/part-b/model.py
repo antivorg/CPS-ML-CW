@@ -1,3 +1,21 @@
+#
+# This scripts contains the functionality to run the simulation discussed in the report. Run
+# this module with a command line argument defined below.
+#
+# python3 -m model [ARG]
+#
+# ARG := {help|kfold|predict|shuffle}
+# - help: view how to run the script
+# - kfold: Run k-fold validation
+# - predict: Run the inference that creates the labels\n
+# - shuffle: Create a shuffled version of the training set
+#
+# Author: Anthony Gaylard
+# Email: aig1u17@soton.ac.uk
+#
+#############################################################################################
+
+
 
 import csv
 import sys
@@ -25,10 +43,11 @@ def print_help():
     helpString = "\nThis scripts contains the functionality to run the simulation " +\
                     "discussed in the report. Run this module with a command line " +\
                     "argument defined below.\n\npython3 -m model [ARG]\n\nARG := " +\
-                    "{help|kfold|svm|randforest}\n" +\
-                    "- help: view how to run the script\n- kfold: Run k-fold cross " +\
-                    "all 3 models\n- Run the parameter sweep for SVM (slow!!!)\n" +\
-                    "- Run the parameter sweep for Rand Forest\n"
+                    "{help|kfold|predict|shuffle}\n" +\
+                    "- help: view how to run the script\n" +\
+                    "- kfold: Run k-fold validation\n" +\
+                    "- predict: Run the inference that creates the labels\n" +\
+                    "- shuffle: Create a shuffled version of the training set\n"
 
     print(helpString)
 
